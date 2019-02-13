@@ -5,6 +5,11 @@
  */
 package Trabalho;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aluno
@@ -14,8 +19,27 @@ public class Trabalho extends javax.swing.JPanel {
     /**
      * Creates new form Trabalho
      */
-    public Trabalho() {
+    public Trabalho() {       
         initComponents();
+        String nem = txtEmpresa.getText();
+        String cnpj1 = ftxtCnpj.getText();
+        String InE = txtIe.getText();
+        String dC = ftxtDc.getText();
+        String Uf = cbUf.getName();
+        String cd = txtCidade.getText();
+        String Cp = ftxtCep.getText();
+        String En = txtEndereco.getText();
+        String br = txtBairro.getText();
+        String el = txtEmail.getText();
+        String tf = ftxtTelefone.getText();
+        String cr = ftxtCelular.getText();
+        String lf = txtLf.getText();
+        String li = txtLi.getText();
+        String cpr = ftxtCpfR.getText();
+        String crr = ftxtCelularR.getText();
+        String rd = ftxtRendaR.getText();
+        
+       
     }
 
     /**
@@ -33,12 +57,14 @@ public class Trabalho extends javax.swing.JPanel {
         jPanel5 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        lblCnpj = new javax.swing.JLabel();
+        lblEmpresa = new javax.swing.JLabel();
         lblIe = new javax.swing.JLabel();
         lblDc = new javax.swing.JLabel();
         txtIe = new javax.swing.JTextField();
         ftxtCnpj = new javax.swing.JFormattedTextField();
         ftxtDc = new javax.swing.JFormattedTextField();
+        lblCnpj1 = new javax.swing.JLabel();
+        txtEmpresa = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         cbUf = new javax.swing.JComboBox<>();
         lblUf = new javax.swing.JLabel();
@@ -60,8 +86,8 @@ public class Trabalho extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         lblFacebook = new javax.swing.JLabel();
         lblInstagram = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtLi = new javax.swing.JTextField();
+        txtLf = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         lvlCpfR = new javax.swing.JLabel();
         lblCelularR = new javax.swing.JLabel();
@@ -88,8 +114,8 @@ public class Trabalho extends javax.swing.JPanel {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        lblCnpj.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblCnpj.setText("CNPJ :");
+        lblEmpresa.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblEmpresa.setText("Empresa : ");
 
         lblIe.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblIe.setText("Inscrição Estadual : ");
@@ -109,6 +135,9 @@ public class Trabalho extends javax.swing.JPanel {
             ex.printStackTrace();
         }
 
+        lblCnpj1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblCnpj1.setText("CNPJ :");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -117,22 +146,30 @@ public class Trabalho extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblIe)
-                    .addComponent(lblCnpj, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDc, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(lblDc, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblEmpresa, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtIe)
                     .addComponent(ftxtCnpj, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                    .addComponent(ftxtDc))
+                    .addComponent(ftxtDc)
+                    .addComponent(txtEmpresa))
                 .addContainerGap(57, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(113, 113, 113)
+                    .addComponent(lblCnpj1)
+                    .addContainerGap(217, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCnpj)
-                    .addComponent(ftxtCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEmpresa))
+                .addGap(18, 18, 18)
+                .addComponent(ftxtCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblIe)
@@ -141,7 +178,12 @@ public class Trabalho extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDc)
                     .addComponent(ftxtDc, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44))
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(96, 96, 96)
+                    .addComponent(lblCnpj1)
+                    .addContainerGap(169, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Empresa", jPanel1);
@@ -310,7 +352,7 @@ public class Trabalho extends javax.swing.JPanel {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextField1))
+                        .addComponent(txtLi))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(104, 104, 104)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -321,7 +363,7 @@ public class Trabalho extends javax.swing.JPanel {
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
+                    .addComponent(txtLf, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel4Layout.setVerticalGroup(
@@ -332,12 +374,12 @@ public class Trabalho extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addComponent(lblInstagram)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtLi, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addGap(83, 83, 83)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLf, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(170, Short.MAX_VALUE)))
         );
 
@@ -370,7 +412,7 @@ public class Trabalho extends javax.swing.JPanel {
             ex.printStackTrace();
         }
 
-        jButton1.setText("Enviar");
+        jButton1.setText("Salvar e Enviar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -391,12 +433,9 @@ public class Trabalho extends javax.swing.JPanel {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ftxtCelularR)
                     .addComponent(ftxtCpfR)
-                    .addComponent(ftxtRendaR, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(176, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
+                    .addComponent(ftxtRendaR, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 30, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,6 +480,9 @@ public class Trabalho extends javax.swing.JPanel {
     }//GEN-LAST:event_ftxtTelefoneActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        
+        String nem = txtEmpresa.getText();
         String cnpj1 = ftxtCnpj.getText();
         String InE = txtIe.getText();
         String dC = ftxtDc.getText();
@@ -448,6 +490,31 @@ public class Trabalho extends javax.swing.JPanel {
         String cd = txtCidade.getText();
         String Cp = ftxtCep.getText();
         String En = txtEndereco.getText();
+        String br = txtBairro.getText();
+        String el = txtEmail.getText();
+        String tf = ftxtTelefone.getText();
+        String cr = ftxtCelular.getText();
+        String lf = txtLf.getText();
+        String li = txtLi.getText();
+        String cpr = ftxtCpfR.getText();
+        String crr = ftxtCelularR.getText();
+        String rd = ftxtRendaR.getText();
+        ManipulacaoDeArquivo m = new ManipulacaoDeArquivo("C:\\Users\\Suporte\\Desktop","trabalho.doc");      
+        try {
+            m.gravar("Empresa : "+nem+"CNPJ : "+cnpj1+"Inscrição Estadual : "+InE+"Data de Cadestro : "+dC+"Estado : "+Uf+"Cidade : "+cd
+  +"CEP : "+Cp+"Endereco : "+En+"Bairro : "+br+"Email : "+el+"Telefone : "+tf+"Celular : "+cr+"Facebook : "+lf+"Instagram : "+li+"Cpf : "+cpr+"Celular : "+crr+"Renda : "+rd);
+        } catch (IOException ex) {
+            Logger.getLogger(Trabalho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         if (nem == null) {
+         JOptionPane.showMessageDialog(null, "Campo Empresa/Empresa esta vazio favor preencher", "Caixa vazia", JOptionPane.ERROR_MESSAGE, null);   
+        }
+         if (cnpj1 == null) {
+         JOptionPane.showMessageDialog(null, "Campo Empresa/Empresa esta vazio favor preencher", "Caixa vazia", JOptionPane.ERROR_MESSAGE, null);   
+        }
+         if (InE == null) {
+         JOptionPane.showMessageDialog(null, "Campo Empresa/Empresa esta vazio favor preencher", "Caixa vazia", JOptionPane.ERROR_MESSAGE, null);   
+        }
         
                 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -474,16 +541,15 @@ public class Trabalho extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblBairro;
     private javax.swing.JLabel lblCelular;
     private javax.swing.JLabel lblCelularR;
     private javax.swing.JLabel lblCep;
     private javax.swing.JLabel lblCidade;
-    private javax.swing.JLabel lblCnpj;
+    private javax.swing.JLabel lblCnpj1;
     private javax.swing.JLabel lblDc;
     private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblEmpresa;
     private javax.swing.JLabel lblEn;
     private javax.swing.JLabel lblFacebook;
     private javax.swing.JLabel lblIe;
@@ -495,7 +561,10 @@ public class Trabalho extends javax.swing.JPanel {
     private javax.swing.JTextField txtBairro;
     private javax.swing.JTextField txtCidade;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEmpresa;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtIe;
+    private javax.swing.JTextField txtLf;
+    private javax.swing.JTextField txtLi;
     // End of variables declaration//GEN-END:variables
 }

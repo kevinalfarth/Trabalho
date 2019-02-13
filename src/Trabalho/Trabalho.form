@@ -81,27 +81,37 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblIe" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblCnpj" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblDc" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEmpresa" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtIe" max="32767" attributes="0"/>
                           <Component id="ftxtCnpj" alignment="0" pref="166" max="32767" attributes="0"/>
                           <Component id="ftxtDc" max="32767" attributes="0"/>
+                          <Component id="txtEmpresa" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="57" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                          <Component id="lblCnpj1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="217" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblCnpj" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ftxtCnpj" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="txtEmpresa" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="lblEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="ftxtCnpj" min="-2" pref="39" max="-2" attributes="0"/>
                       <EmptySpace pref="29" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblIe" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -112,18 +122,25 @@
                           <Component id="lblDc" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ftxtDc" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="lblCnpj1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="169" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblCnpj">
+            <Component class="javax.swing.JLabel" name="lblEmpresa">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="CNPJ :"/>
+                <Property name="text" type="java.lang.String" value="Empresa : "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblIe">
@@ -157,6 +174,16 @@
                   <Format format="##/##/##" subtype="-1" type="5"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCnpj1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="CNPJ :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEmpresa">
             </Component>
           </SubComponents>
         </Container>
@@ -450,7 +477,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField1" max="32767" attributes="0"/>
+                              <Component id="txtLi" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
@@ -466,7 +493,7 @@
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField2" pref="362" max="32767" attributes="0"/>
+                          <Component id="txtLf" pref="362" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -480,13 +507,13 @@
                       <EmptySpace pref="105" max="32767" attributes="0"/>
                       <Component id="lblInstagram" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="txtLi" min="-2" pref="33" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                          <Component id="jTextField2" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="txtLf" min="-2" pref="34" max="-2" attributes="0"/>
                           <EmptySpace pref="170" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -510,9 +537,9 @@
                 <Property name="text" type="java.lang.String" value="Link Instagram : "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="txtLi">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="txtLf">
             </Component>
           </SubComponents>
         </Container>
@@ -540,13 +567,9 @@
                           <Component id="ftxtCelularR" max="32767" attributes="0"/>
                           <Component id="ftxtCpfR" max="32767" attributes="0"/>
                           <Component id="ftxtRendaR" alignment="0" pref="250" max="32767" attributes="0"/>
+                          <Component id="jButton1" alignment="1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="176" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="114" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -623,7 +646,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Enviar"/>
+                <Property name="text" type="java.lang.String" value="Salvar e Enviar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
